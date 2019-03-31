@@ -1,16 +1,15 @@
 <?php
 /**
- * The base configuration for WordPress
+ * Основне поставке Вордпреса.
  *
- * The wp-config.php creation script uses this file during the
- * installation. You don't have to use the web site, you can
- * copy this file to "wp-config.php" and fill in the values.
+ * Ова датотека се користи од стране скрипте за прављење wp-config.php током
+ * инсталирања. Не морате да користите веб место, само умножите ову датотеку
+ * у "wp-config.php" и попуните вредности.
  *
- * This file contains the following configurations:
- *
- * * MySQL settings
- * * Secret keys
- * * Database table prefix
+ * Ова датотека садржи следеће поставке:
+ * * MySQL подешавања
+ * * тајне кључеве
+ * * префикс табеле
  * * ABSPATH
  *
  * @link https://codex.wordpress.org/Editing_wp-config.php
@@ -18,73 +17,74 @@
  * @package WordPress
  */
 
-// ** MySQL settings - You can get this info from your web host ** //
-/** The name of the database for WordPress */
-define( 'DB_NAME', 'database_name_here' );
+// ** MySQL подешавања - Можете добити ове податке од свог домаћина ** //
+/** Име базе података за Вордпрес */
+define( 'DB_NAME', 'ime_baze_ovde' );
 
-/** MySQL database username */
-define( 'DB_USER', 'username_here' );
+/** Корисничко име MySQL базе */
+define( 'DB_USER', 'korisnicko_ime_ovde' );
 
-/** MySQL database password */
-define( 'DB_PASSWORD', 'password_here' );
+/** Лозинка MySQL базе */
+define( 'DB_PASSWORD', 'lozinka_ovde' );
 
-/** MySQL hostname */
+/** MySQL домаћин */
 define( 'DB_HOST', 'localhost' );
 
-/** Database Charset to use in creating database tables. */
+/** Скуп знакова за коришћење у прављењу табела базе. */
 define( 'DB_CHARSET', 'utf8' );
 
-/** The Database Collate type. Don't change this if in doubt. */
+/** The Database Collate type. Не мењајте ово ако сте у сумњи. */
 define( 'DB_COLLATE', '' );
 
 /**#@+
- * Authentication Unique Keys and Salts.
+ * Јединствени кључеви за аутентификацију.
  *
- * Change these to different unique phrases!
- * You can generate these using the {@link https://api.wordpress.org/secret-key/1.1/salt/ WordPress.org secret-key service}
- * You can change these at any point in time to invalidate all existing cookies. This will force all users to have to log in again.
+ * Промените ово у различите јединствене изразе!
+ * Можете направити ово користећи {@link https://api.wordpress.org/secret-key/1.1/salt/ WordPress.org услугу тајних кључева}
+ * Ово можете променити у сваком тренутку да бисте поништили све постојеће колачиће.
+ * Ово ће натерати кориснике да се поново пријаве.
  *
  * @since 2.6.0
  */
-define( 'AUTH_KEY',         'put your unique phrase here' );
-define( 'SECURE_AUTH_KEY',  'put your unique phrase here' );
-define( 'LOGGED_IN_KEY',    'put your unique phrase here' );
-define( 'NONCE_KEY',        'put your unique phrase here' );
-define( 'AUTH_SALT',        'put your unique phrase here' );
-define( 'SECURE_AUTH_SALT', 'put your unique phrase here' );
-define( 'LOGGED_IN_SALT',   'put your unique phrase here' );
-define( 'NONCE_SALT',       'put your unique phrase here' );
+define( 'AUTH_KEY',         'ovde stavite svoj jedinstveni izraz' );
+define( 'SECURE_AUTH_KEY',  'ovde stavite svoj jedinstveni izraz' );
+define( 'LOGGED_IN_KEY',    'ovde stavite svoj jedinstveni izraz' );
+define( 'NONCE_KEY',        'ovde stavite svoj jedinstveni izraz' );
+define( 'AUTH_SALT',        'ovde stavite svoj jedinstveni izraz' );
+define( 'SECURE_AUTH_SALT', 'ovde stavite svoj jedinstveni izraz' );
+define( 'LOGGED_IN_SALT',   'ovde stavite svoj jedinstveni izraz' );
+define( 'NONCE_SALT',       'ovde stavite svoj jedinstveni izraz' );
 
 /**#@-*/
 
 /**
- * WordPress Database Table prefix.
+ * Префикс табеле Вордпресове базе података.
  *
- * You can have multiple installations in one database if you give each
- * a unique prefix. Only numbers, letters, and underscores please!
+ * Можете имати више инсталација Вордпреса у једној бази уколико
+ * свакој дате јединствени префикс. Само бројеви, слова и доње цртице!
  */
 $table_prefix = 'wp_';
 
 /**
- * For developers: WordPress debugging mode.
+ * За градитеље: исправљање грешака у Вордпресу ("WordPress debugging mode").
  *
- * Change this to true to enable the display of notices during development.
- * It is strongly recommended that plugin and theme developers use WP_DEBUG
- * in their development environments.
+ * Промените ово у true да бисте омогућили приказ напомена током градње.
+ * Веома се препоручује да градитељи тема и додатака користе WP_DEBUG
+ * у својим градитељским окружењима.
  *
- * For information on other constants that can be used for debugging,
- * visit the Codex.
+ * За више података о осталим константама које могу да се
+ * користе током отклањања грешака, посетите Документацију.
  *
  * @link https://codex.wordpress.org/Debugging_in_WordPress
  */
 define( 'WP_DEBUG', false );
 
-/* That's all, stop editing! Happy publishing. */
+/* То је све, престаните са уређивањем! Срећно објављивање. */
 
-/** Absolute path to the WordPress directory. */
+/** Апсолутна путања ка Вордпресовом директоријуму. */
 if ( ! defined( 'ABSPATH' ) ) {
 	define( 'ABSPATH', dirname( __FILE__ ) . '/' );
 }
 
-/** Sets up WordPress vars and included files. */
+/** Поставља Вордпресове променљиве и укључене датотеке. */
 require_once( ABSPATH . 'wp-settings.php' );
